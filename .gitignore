@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments
+venv/
+env/
+env_bak/
+env_tmp/
+venv_bak/
+venv_tmp/
+
+# FastAPI
+/.vscode/
+/.idea/

@@ -21,6 +21,9 @@ Influencia de un conjunto C en un estado determinado.
 
 **Ejemplo**: un paciente tiene fiebre cuando su temperatura corporal es mayor a 37 grados centigrados.
 
+## fusificacion
+Pasar de un valor real a un valor difuso o de grado de pertenencia a un conjunto.
+
 
 
 
