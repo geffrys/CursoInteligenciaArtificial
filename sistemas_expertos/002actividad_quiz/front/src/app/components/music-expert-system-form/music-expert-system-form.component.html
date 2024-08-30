@@ -1,0 +1,18 @@
+<form (ngSubmit)="onSubmit(personForm)" #personForm="ngForm">
+    <div>
+        <label for="name">Nombre :</label>
+        <input type="text" id="name" name="name" ngModel>
+    </div>
+    <div>
+        <label for="name">Apellido:</label>
+        <input type="text" id="name" name="name" ngModel>
+    </div>
+    <div>
+        <label for="mood">Search:</label>
+        <select name="mood" id="mood" ngModel>
+            <option *ngFor="let mood of moods" [value]="mood">
+                {{mood}}
+            </option>
+        </select>
+    </div>
+</form>
