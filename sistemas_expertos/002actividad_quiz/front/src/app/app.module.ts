@@ -5,11 +5,13 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { MusicExpertSystemFormComponent } from './components/music-expert-system-form/music-expert-system-form.component';
+import { RecomendationListComponent } from './components/recomendation-list/recomendation-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MusicExpertSystemFormComponent
+    MusicExpertSystemFormComponent,
+    RecomendationListComponent
   ],
   imports: [
     BrowserModule,

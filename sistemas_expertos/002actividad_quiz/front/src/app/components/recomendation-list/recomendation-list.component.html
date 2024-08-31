@@ -1,0 +1,12 @@
+
+<div>
+    <h2>Recomendaciones</h2>
+    <div *ngFor="let recomendation of recomendations">
+        <div class="card">
+            <h3>{{recomendation.song_name}}</h3>
+            <p>{{recomendation.genre}}</p>
+            <p>{{recomendation.artist}}</p>
+            <p>{{recomendation.mood}}</p>
+        </div>
+    </div>
+</div>
