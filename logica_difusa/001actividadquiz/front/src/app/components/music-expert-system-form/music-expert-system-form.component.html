@@ -1,0 +1,27 @@
+<form (ngSubmit)="onSubmit(personForm)" #personForm="ngForm">
+    <div>
+        <label for="name">Nombre :</label>
+        <input type="text" id="name" name="name" ngModel>
+    </div>
+    <div>
+        <label for="name">Genero preferido:</label>
+        <select name="prefered_genre" id="prefered_genre" ngModel>
+            <option *ngFor="let genre of genres" [value]="genre">
+                {{genre}}
+            </option>
+        </select>        
+    </div>
+    <div>
+        <label for="mood">Search:</label>
+        <select name="mood" id="mood" ngModel>
+            <option *ngFor="let mood of moods" [value]="mood">
+                {{mood}}
+            </option>
+        </select>
+    </div>
+    <button type="submit">Enviar</button>
+</form>
+
+<div>
+    <app-recomendation-list [recomendations]="recomendations"></app-recomendation-list>
+</div>
