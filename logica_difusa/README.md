@@ -26,10 +26,3 @@ Pasar de un valor real a un valor difuso o de grado de pertenencia a un conjunto
 
 
 
-
-
-
-```mermaid
-graph TB
-
-```
