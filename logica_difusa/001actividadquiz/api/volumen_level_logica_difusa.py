@@ -19,9 +19,9 @@ hour['manana'] = fuzz.trapmf(hour.universe, [5, 7 , 11, 13])
 hour['tarde'] = fuzz.trapmf(hour.universe, [12, 14, 16, 18])
 hour['noche'] = fuzz.trapmf(hour.universe, [17, 19, 22, 25]
                            )
-mood['triste'] = fuzz.trapmf(mood.universe, [0, .5, 3.5, 4])
+mood['triste'] = fuzz.trapmf(mood.universe, [0, 0, 3.5, 4])
 mood['normal'] = fuzz.trapmf(mood.universe, [3, 3.5, 6.5, 7])
-mood['feliz'] = fuzz.trapmf(mood.universe, [6, 6.5, 9.5, 11])
+mood['feliz'] = fuzz.trapmf(mood.universe, [6, 6.5, 10, 10])
 # Fin de definicion de memberships
 
 # Reglas difusas
