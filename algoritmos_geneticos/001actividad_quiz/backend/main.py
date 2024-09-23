@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+from algoritmo_genetico import genetic_algorithm
 
 
 app = FastAPI()
@@ -12,30 +13,8 @@ app.add_middleware(
     allow_origins=origins)
 
 class Population(BaseModel):
-    songRating: float
-    songPopularity: float
-    songDuration: float
-    songEnergy: float
-    songDanceability: float
-    songLoudness: float
-    @property
-    def songRating(self):
-        return self._songRating
-    @property
-    def songPopularity(self):
-        return self._songPopularity
-    @property
-    def songDuration(self):
-        return self._songDuration
-    @property
-    def songEnergy(self):
-        return self._songEnergy
-    @property
-    def songDanceability(self):
-        return self._songDanceability
-    @property
-    def songLoudness(self):
-        return self._songLoudness
+    preferredGenre: str
+    mood: str
 
 
 @app.get("/health")
@@ -45,4 +24,4 @@ def read_root():
 @app.post("/evaluate")
 def evaluate_population(population: Population):
     print("Evaluando población")
-    return f'danceability: {population.songDanceability}, \n songDuration: {population.songDuration}, \n songEnergy: {population.songEnergy}, \n songLoudness: {population.songLoudness}, \n songPopularity: {population.songPopularity}, \n songRating: {population.songRating}'
+    return genetic_algorithm(population.preferredGenre, population.mood)
