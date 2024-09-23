@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from algoritmo_genetico import genetic_algorithm
+import algoritmo_genetico
 
 
 app = FastAPI()
@@ -25,3 +26,11 @@ def read_root():
 def evaluate_population(population: Population):
     print("Evaluando población")
     return genetic_algorithm(population.preferredGenre, population.mood)
+
+@app.get("/genres")
+def get_genres():
+    return algoritmo_genetico.get_genres()
+
+@app.get("/moods")
+def get_moods():
+    return algoritmo_genetico.get_moods()

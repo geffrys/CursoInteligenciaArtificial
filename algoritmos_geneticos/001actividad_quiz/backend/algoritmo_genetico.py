@@ -1,6 +1,12 @@
 import random 
 import numpy as np
 
+def get_genres():
+    return genre_db
+
+def get_moods():
+    return mood_db
+
 # Definimos la base de datos de canciones
 songs_db = [
     {"id": 1, "genre": "rock", "mood": "melancholic", "name": "Bohemian Rhapsody", "artist": "Queen"},
@@ -34,7 +40,39 @@ songs_db = [
     {"id": 29, "genre": "rap", "mood": "relaxed", "name": "Gin and Juice", "artist": "Snoop Dogg"},
     {"id": 30, "genre": "rap", "mood": "energetic", "name": "SICKO MODE", "artist": "Travis Scott"},
     {"id": 31, "genre": "rap", "mood": "romantic", "name": "Love The Way You Lie", "artist": "Eminem, Rihanna"},
-    {"id": 32, "genre": "rap", "mood": "chill", "name": "SAD!", "artist": "XXXTENTACION"}
+    {"id": 32, "genre": "rap", "mood": "chill", "name": "SAD!", "artist": "XXXTENTACION"},
+    {"id": 33, "genre": "rock", "mood": "melancholic", "name": "Bohemian Rhapsody", "artist": "Queen"},
+    {"id": 34, "genre": "rock", "mood": "energetic", "name": "Highway to Hell", "artist": "AC/DC"},
+    {"id": 35, "genre": "rock", "mood": "angry", "name": "Killing in the Name", "artist": "Rage Against the Machine"},
+    {"id": 36, "genre": "rock", "mood": "party", "name": "Don't Stop Believin'", "artist": "Journey"},
+    {"id": 37, "genre": "rock", "mood": "happy", "name": "Here Comes the Sun", "artist": "The Beatles"},
+    {"id": 38, "genre": "rock", "mood": "relaxed", "name": "Wish You Were Here", "artist": "Pink Floyd"},
+    {"id": 39, "genre": "rock", "mood": "romantic", "name": "Sweet Child O' Mine", "artist": "Guns N' Roses"},
+    {"id": 40, "genre": "rock", "mood": "chill", "name": "Hotel California", "artist": "Eagles"},
+    {"id": 41, "genre": "pop", "mood": "happy", "name": "Dancing Queen", "artist": "ABBA"},
+    {"id": 42, "genre": "pop", "mood": "sad", "name": "Someone Like You", "artist": "Adele"},
+    {"id": 43, "genre": "pop", "mood": "melancholic", "name": "Yesterday", "artist": "The Beatles"},
+    {"id": 44, "genre": "pop", "mood": "angry", "name": "Bad Guy", "artist": "Billie Eilish"},
+    {"id": 45, "genre": "pop", "mood": "relaxed", "name": "Someone You Loved", "artist": "Lewis Capaldi"},
+    {"id": 46, "genre": "pop", "mood": "energetic", "name": "Blinding Lights", "artist": "The Weeknd"},
+    {"id": 47, "genre": "pop", "mood": "romantic", "name": "Love Story", "artist": "Taylor Swift"},
+    {"id": 48, "genre": "pop", "mood": "chill", "name": "Watermelon Sugar", "artist": "Harry Styles"},
+    {"id": 49, "genre": "reggaeton", "mood": "happy", "name": "Dákiti", "artist": "Bad Bunny, Jhay Cortez"},
+    {"id": 50, "genre": "reggaeton", "mood": "sad", "name": "Hasta Que Dios Diga", "artist": "Anuel AA, Bad Bunny"},
+    {"id": 51, "genre": "reggaeton", "mood": "melancholic", "name": "La Noche de Anoche", "artist": "Bad Bunny, Rosalía"},
+    {"id": 52, "genre": "reggaeton", "mood": "angry", "name": "Yo Perreo Sola", "artist": "Bad Bunny"},
+    {"id": 53, "genre": "reggaeton", "mood": "relaxed", "name": "Relación - Remix", "artist": "Sech, Daddy Yankee, J Balvin, Rosalía, Farruko"},
+    {"id": 54, "genre": "reggaeton", "mood": "energetic", "name": "Safaera", "artist": "Bad Bunny, Jowell & Randy, Ñengo Flow"},
+    {"id": 55, "genre": "reggaeton", "mood": "romantic", "name": "La Modelo", "artist": "Ozuna, Cardi B"},
+    {"id": 56, "genre": "reggaeton", "mood": "chill", "name": "Soy Peor", "artist": "Bad Bunny"},
+    {"id": 57, "genre": "rap", "mood": "happy", "name": "Good Life", "artist": "Kanye West, T-Pain"},
+    {"id": 58, "genre": "rap", "mood": "sad", "name": "Lucid Dreams", "artist": "Juice WRLD"},
+    {"id": 59, "genre": "rap", "mood": "melancholic", "name": "Changes", "artist": "2Pac"},
+    {"id": 60, "genre": "rap", "mood": "angry", "name": "m.A.A.d city", "artist": "Kendrick Lamar"},
+    {"id": 61, "genre": "rap", "mood": "relaxed", "name": "Gin and Juice", "artist": "Snoop Dogg"},
+    {"id": 62, "genre": "rap", "mood": "energetic", "name": "SICKO MODE", "artist": "Travis Scott"},
+    {"id": 63, "genre": "rap", "mood": "romantic", "name": "Love The Way You Lie", "artist": "Eminem, Rihanna"},
+    {"id": 64, "genre": "rap", "mood": "chill", "name": "SAD!", "artist": "XXXTENTACION"}
 ]
 # Definimos la base de datos de los mood
 mood_db = [

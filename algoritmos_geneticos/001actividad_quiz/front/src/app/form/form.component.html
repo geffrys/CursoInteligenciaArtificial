@@ -1,0 +1,23 @@
+<form (ngSubmit)="onSubmit(personForm)" #personForm="ngForm">
+    <div class="form-group">
+        <label for="inputGenre"></label>
+        <select id="inputGenre" ngModel>
+            <option value="">Seleccione su genero preferido</option>
+            <option *ngFor="let genre of genres" [value]="genre.name">
+                {{genre.name}}
+            </option>
+        </select>
+    </div>
+    <div class="form-group" ngModel>
+        <label for="inputMood"></label>
+        <select id="inputMood">
+            <option value="">Seleccione un mood</option>
+            <option *ngFor="let mood of moods" [value]="mood.name">
+                {{mood.name}}
+            </option>
+        </select>
+    </div>
+    <div>
+        <button type="submit">Enviar</button>
+    </div>
+</form>
