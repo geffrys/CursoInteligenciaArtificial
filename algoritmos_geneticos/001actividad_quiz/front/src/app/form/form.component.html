@@ -1,16 +1,16 @@
-<form (ngSubmit)="onSubmit(personForm)" #personForm="ngForm">
+<form (ngSubmit)="onSubmit(preferencesForm)" #preferencesForm="ngForm">
     <div class="form-group">
-        <label for="inputGenre"></label>
-        <select id="inputGenre" ngModel>
+        <label for="inputGenre">Music genre</label>
+        <select id="inputGenre" name="preferredGenre" ngModel>
             <option value="">Seleccione su genero preferido</option>
             <option *ngFor="let genre of genres" [value]="genre.name">
                 {{genre.name}}
             </option>
         </select>
     </div>
-    <div class="form-group" ngModel>
-        <label for="inputMood"></label>
-        <select id="inputMood">
+    <div class="form-group" >
+        <label for="inputMood">Mood</label>
+        <select id="inputMood" name="mood" ngModel>
             <option value="">Seleccione un mood</option>
             <option *ngFor="let mood of moods" [value]="mood.name">
                 {{mood.name}}
@@ -21,3 +21,12 @@
         <button type="submit">Enviar</button>
     </div>
 </form>
+<div>
+
+<div>
+    <ul>
+        <li *ngFor="let recomendation of result_playlist">
+            {{recomendation.name}} - {{recomendation.artist}} - {{recomendation.genre}} - {{recomendation.mood}}
+        </li>
+    </ul>
+</div>

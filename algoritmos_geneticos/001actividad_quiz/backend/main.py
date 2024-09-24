@@ -7,11 +7,13 @@ import algoritmo_genetico
 
 app = FastAPI()
 
-origins = [
-    "*"]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins)
+    allow_origins=["*"],  # Permite todas las orígenes
+    allow_credentials=True,
+    allow_methods=["*"],  # Permite todos los métodos (GET, POST, etc.)
+    allow_headers=["*"],  # Permite todos los headers
+)
 
 class Population(BaseModel):
     preferredGenre: str

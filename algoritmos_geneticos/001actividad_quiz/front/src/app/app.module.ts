@@ -5,11 +5,13 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { ApiConsumeService } from './services/api-consume.service';
 import { FormComponent } from './form/form.component';
+import { PlaylistComponent } from './playlist/playlist.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormComponent,
+    PlaylistComponent,
   ],
   imports: [
     BrowserModule,

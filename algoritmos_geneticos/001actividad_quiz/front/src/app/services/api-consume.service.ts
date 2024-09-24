@@ -12,6 +12,7 @@ export class ApiConsumeService {
   constructor(private http: HttpClient) { }
 
   evaluate(condiciones: any): Observable<any> {
+    console.log(condiciones);
     return this.http.post(`${this.apiUrl}/evaluate`, condiciones);
   }
 

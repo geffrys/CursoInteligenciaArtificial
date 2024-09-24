@@ -13,17 +13,21 @@ export class FormComponent implements OnInit{
   genres: any;
   moods: any;
 
+  result_playlist: any;
+
   onSubmit(data: any){
-    console.log(data);
+    console.log(data.value);
+    this.api.evaluate(data.value).subscribe((data: any) => {
+      this.result_playlist = data
+      console.log(this.result_playlist);
+    } , );
   }
 
   ngOnInit(): void {
     this.api.getMoods().forEach((data: any) => {
-      console.log(data);
       this.moods = data;
     }, );
     this.api.getGenres().forEach((data: any) => {
-      console.log(data);
       this.genres = data;
     }, );
   }
