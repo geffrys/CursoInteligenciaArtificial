@@ -12,7 +12,7 @@ imagen = Image.open(BytesIO(rta.content))
 imgArrayOriginal = np.array(imagen)
 
 # Parámetros del algoritmo genético
-num_generaciones = 10  # Aumentar el número de generaciones para mayor precisión
+num_generaciones = 2000  # Aumentar el número de generaciones para mayor precisión
 tamaño_poblacion = 50    # Tamaño de la población
 tasa_mutacion = 0.01     # Probabilidad de que un píxel mute
 tasa_cruce = 0.5         # Probabilidad de cruzar píxeles entre dos padres
@@ -54,9 +54,7 @@ for generacion in range(num_generaciones):
     if generacion % 50 == 0:
         mejor_individuo = poblacion[0]
         print(f"Generación {generacion+1}, Mejor Aptitud: {fitness(mejor_individuo)}")
-        plt.imshow(mejor_individuo)
-        plt.title(f"Generación {generacion+1}")
-        plt.show()
+        
     
     # Seleccionar la mitad superior de la población
     poblacion = poblacion[:tamaño_poblacion//2]
@@ -71,6 +69,10 @@ for generacion in range(num_generaciones):
     
     # Reemplazar la vieja población con la nueva
     poblacion.extend(nuevos_individuos)
+    plt.imshow(mejor_individuo)
+    plt.title(f"Generación {generacion+1}")
+    plt.show()
+    plt.refresh()
 
 # Mostrar el mejor resultado final
 mejor_individuo_final = poblacion[0]
